@@ -11,15 +11,11 @@
       position: relative;
     }
 
-    .img {
+    img {
       position: absolute;
       z-index: 0;
       margin-left: 76px;
       width: 17%;
-    }
-
-    .img.active {
-      z-index: 1;
     }
 
     .button {
@@ -39,14 +35,13 @@
   </style>
   <body>
     <div class="slider">
-      <img class="img active" src="/assets/images.jpg" alt="" />
+      <img src="/assets/images.jpg" alt="" />
       <img
-        class="img"
         src="/assets/1068422950_0_0_1200_1200_1920x0_80_0_0_a51e00ed4439c72f67f64101ad1f61b6.jpg"
         alt=""
       />
-      <img class="img" src="./assets/1682155161_shutok.ru.01.jpg" alt="" />
-      <img class="img" src="./assets/1338283950_alpaki-4.jpg" alt="" />
+      <img src="./assets/1682155161_shutok.ru.01.jpg" alt="" />
+      <img src="./assets/1338283950_alpaki-4.jpg" alt="" />
       <div class="button">
         <button class="back">Назад</button>
         <button class="next">Вперед</button>
@@ -54,43 +49,44 @@
     </div>
 
     <!--<script src="script.js"></script>-->
-    <script>// Получаем элементы слайдера
-const slider = document.querySelector('.slider');
-const backButton = document.querySelector('.back');
-const nextButton = document.querySelector('.next');
-const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = slides.length;
-let slideIndex = 0;
+    <script>
+      // Получаем элементы слайдера
+      const slider = document.querySelector(".slider");
+      const backButton = document.querySelector(".back");
+      const nextButton = document.querySelector(".next");
+      const slides = Array.from(slider.querySelectorAll("img"));
+      const slideCount = slides.length;
+      let slideIndex = 0;
 
-// Устанавливаем обработчики событий для кнопок
-backButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click', showNextSlide);
+      // Устанавливаем обработчики событий для кнопок
+      backButton.addEventListener("click", showPreviousSlide);
+      nextButton.addEventListener("click", showNextSlide);
 
-// Функция для показа предыдущего слайда
-function showPreviousSlide() {
-  slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-  updateSlider();
-}
+      // Функция для показа предыдущего слайда
+      function showPreviousSlide() {
+        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
+        updateSlider();
+      }
 
-// Функция для показа следующего слайда
-function showNextSlide() {
-  slideIndex = (slideIndex + 1) % slideCount;
-  updateSlider();
-}
+      // Функция для показа следующего слайда
+      function showNextSlide() {
+        slideIndex = (slideIndex + 1) % slideCount;
+        updateSlider();
+      }
 
-// Функция для обновления отображения слайдера
-function updateSlider() {
-  slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-      slide.style.display = 'block';
-    } else {
-      slide.style.display = 'none';
-    }
-  });
-}
+      // Функция для обновления отображения слайдера
+      function updateSlider() {
+        slides.forEach((slide, index) => {
+          if (index === slideIndex) {
+            slide.style.display = "block";
+          } else {
+            slide.style.display = "none";
+          }
+        });
+      }
 
-// Инициализация слайдера
-updateSlider();
-</script>
+      // Инициализация слайдера
+      updateSlider();
+    </script>
   </body>
 </html>
