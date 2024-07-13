@@ -1,4 +1,4 @@
-/*const images = document.querySelectorAll(".img");
+const images = document.querySelectorAll(".img");
 let currentImageIndex = 0;
 
 function showImage(index) {
@@ -20,4 +20,4 @@ document.querySelector(".next").addEventListener("click", () => {
   currentImageIndex =
     currentImageIndex < images.length - 1 ? currentImageIndex + 1 : 0;
   showImage(currentImageIndex);
-});*/
+});
