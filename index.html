@@ -6,10 +6,6 @@
     <title>Slider JS</title>
   </head>
   <style>
-    .slider {
-      position: relative;
-    }
-
     img {
       position: absolute;
       z-index: 0;
@@ -17,11 +13,8 @@
       width: 17%;
     }
 
-    .button {
-      position: absolute;
-      margin-top: 269px;
-    }
     button {
+      margin-top: 269px;
       width: 200px;
       background-color: #cfcfcf;
       color: rgb(7, 7, 7);
@@ -33,74 +26,26 @@
     }
   </style>
   <body>
-    <div class="slider">
-      <!--<img src="/assets/images.jpg" alt="" />
-      <img
-        src="/assets/1068422950_0_0_1200_1200_1920x0_80_0_0_a51e00ed4439c72f67f64101ad1f61b6.jpg"
-        alt=""
-      />-->
+    <div>
       <img src="./assets/1682155161_shutok.ru.01.jpg" alt="" />
       <img src="./assets/1338283950_alpaki-4.jpg" alt="" />
-      <div class="button">
-        <button class="back">Назад</button>
-        <button class="next">Вперед</button>
-      </div>
+      <button>Назад</button>
+      <button>Вперед</button>
     </div>
 
     <!--<script src="script.js"></script>-->
     <script>
-      // Получаем элементы слайдера
-      const slider = document.querySelector(".slider");
-      const backButton = document.querySelector(".back");
-      const nextButton = document.querySelector(".next");
-      const slides = Array.from(slider.querySelectorAll("img"));
-      const slideCount = slides.length;
-      let slideIndex = 0;
-
-      // Устанавливаем обработчики событий для кнопок
-      backButton.addEventListener("click", showPreviousSlide);
-      nextButton.addEventListener("click", showNextSlide);
-
-      // Функция для показа предыдущего слайда
-      function showPreviousSlide() {
-        slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-        updateSlider();
-      }
-
-      // Функция для показа следующего слайда
-      function showNextSlide() {
-        slideIndex = (slideIndex + 1) % slideCount;
-        updateSlider();
-      }
-
-      // Функция для обновления отображения слайдера
-      function updateSlider() {
-        slides.forEach((slide, index) => {
-          if (index === slideIndex) {
-            slide.style.display = "block";
-          } else {
-            slide.style.display = "none";
-          }
-        });
-      }
-
-      // Инициализация слайдера
-      updateSlider();
-    </script>
-  </body>
-</html>
-
-<!--<script src="script.js"></script>-->
-<!--<script>
-      const images = docment.querySelectorAll("img");
-      const backButton = docment.querySelectorAll("button");
+      const images = document.querySelectorAll("img");
+      const buttons = document.querySelectorAll("button");
       let currentImage = 0;
       images[1].style.display = "none";
-      bttons.forEach((button) => {
+      buttons.forEach((button) => {
         button.addEventListener("click", () => {
           images[currentImage].style.display = "none";
           currentImage = (currentImage + 1) % 2;
           images[currentImage].style.display = "block";
         });
       });
-    </script>-->
+    </script>
+  </body>
+</html>
