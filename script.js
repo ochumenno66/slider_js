@@ -1,10 +1,3 @@
-function showMessage() {
-  console.log("Я учу JavaScript!");
-}
-showMessage();
-
-
-
 const images = document.querySelectorAll(".img");
 let currentImageIndex = 0;
 
