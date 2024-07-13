@@ -27,25 +27,12 @@
   </style>
   <body>
     <div>
-      <img src="./assets/1682155161_shutok.ru.01.jpg" alt="" />
-      <img src="./assets/1338283950_alpaki-4.jpg" alt="" />
+      <img src="/assets/1682155161_shutok.ru.01.jpg" alt="" />
+      <img src="/assets/1338283950_alpaki-4.jpg" alt="" />
       <button>Назад</button>
       <button>Вперед</button>
     </div>
 
-    <!--<script src="script.js"></script>-->
-    <script>
-      const images = document.querySelectorAll("img");
-      const buttons = document.querySelectorAll("button");
-      let currentImage = 0;
-      images[1].style.display = "none";
-      buttons.forEach((button) => {
-        button.addEventListener("click", () => {
-          images[currentImage].style.display = "none";
-          currentImage = (currentImage + 1) % 2;
-          images[currentImage].style.display = "block";
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
