@@ -1,7 +1,7 @@
-/*function learnJavaScript() {
+function learnJavaScript() {
   console.log("Я учу JavaScript!");
 }
-learnJavaScript();*/
+learnJavaScript();
 
 const images = document.querySelectorAll("img");
 const buttons = document.querySelectorAll("button");
