@@ -1,0 +1,32 @@
+.slider {
+  position: relative;
+  margin-left: 41%;
+}
+
+.img {
+  position: absolute;
+  z-index: 0;
+}
+
+.img.active {
+  z-index: 1;
+}
+
+button {
+  position: absolute;
+  margin-top: 269px;
+  width: 200px;
+  background-color: #cfcfcf;
+  color: rgb(7, 7, 7);
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.back {
+  left: -80px;
+}
+.next {
+  right: 543px;
+}
